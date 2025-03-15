@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Define tu paletade colores personalizada usando HSL */
+@theme {
+  --color-primary: hsl(226, 71%, 40%);    
+  --color-secondary: hsl(140, 65%, 42%);  
+}
+
+@layer components {
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+  .text-secondary {
+    color: var(--color-secondary);
+  }
+}
