@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
-/* Define tu paletade colores personalizada usando HSL */
 @theme {
-  --color-primary: hsl(226, 71%, 40%);    
-  --color-secondary: hsl(140, 65%, 42%);  
+  --color-primary: hsl(226, 71%, 40%);
+  --color-secondary: hsl(140, 65%, 42%);
+  --color-accent: hsl(45, 90%, 50%);
 }
 
 @layer components {
@@ -12,5 +12,11 @@
   }
   .text-secondary {
     color: var(--color-secondary);
+  }
+  .nav-link {
+    @apply text-white font-semibold px-3 py-2 hover:bg-blue-600 rounded transition-colors;
+  }
+  .footer {
+    @apply text-gray-300 text-sm;
   }
 }
