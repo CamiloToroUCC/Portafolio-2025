@@ -13,7 +13,7 @@ export default function Home() {
       {/* Sección: Texto de bienvenida */}
       <section className="w-full text-center">
         <h1 className="text-5xl font-bold text-white">¡Hola! Soy Camilo Toro</h1>
-        <p className="mt-4 text-2xl text-white">I'm a Software Engineer.</p>
+        <p className="mt-4 text-2xl text-white">I&apos;m a Software Engineer.</p>
         <p className="mt-2 text-xl text-white">
           Actualmente soy un estudiante de Ingeniería de Software
         </p>
