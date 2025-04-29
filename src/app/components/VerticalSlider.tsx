@@ -3,11 +3,10 @@
 import { useState, useEffect, useRef } from "react";
 
 const sections = [
-  { id: 1, title: "¿Quién soy?", content: "Contenido sobre quién soy." },
-  { id: 2, title: "¿Qué hago?", content: "Contenido sobre qué hago." },
-  { id: 3, title: "¿Qué estudio?", content: "Contenido sobre qué estudio." },
-  { id: 4, title: "Área Profesional", content: "Contenido sobre mi área profesional." },
-  { id: 5, title: "Perfil Profesional", content: "Contenido sobre mi perfil profesional." },
+  { id: 1, title: "¿Quién soy?", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor." },
+  { id: 2, title: "¿Qué hago?", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor." },
+  { id: 3, title: "¿Qué estudio?", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor." },
+  { id: 4, title: "¿Área Profesional?", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor." },
 ];
 
 export default function VerticalSlider() {
@@ -18,11 +17,7 @@ export default function VerticalSlider() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setGapValue("1rem");
-      } else {
-        setGapValue("2rem");
-      }
+      setGapValue(window.innerWidth < 768 ? "1rem" : "2rem");
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -40,9 +35,7 @@ export default function VerticalSlider() {
       });
     };
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    sectionRefs.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
+    sectionRefs.current.forEach((section) => section && observer.observe(section));
     return () => observer.disconnect();
   }, []);
 
@@ -51,19 +44,22 @@ export default function VerticalSlider() {
   return (
     <div ref={containerRef} className="relative" style={{ height: totalHeight }}>
       <div className="flex">
+        {/* Columna Izquierda: Bloques de Contenido */}
         <div className="flex-1 flex flex-col" style={{ gap: gapValue }}>
-          {sections.map((section, index) => (
+          {sections.map((section) => (
             <div
               key={section.id}
               data-index={section.id}
-              ref={(el) => { sectionRefs.current[index] = el; }}
-              className="h-screen snap-start p-6 bg-gray-100 rounded shadow"
+              ref={(el) => { if (el) sectionRefs.current.push(el); }}
+              className="h-screen snap-start p-6 bg-slider rounded shadow transition-all duration-300"
             >
-              <h2 className="text-2xl font-bold mb-4">{section.title}</h2>
-              <p className="text-gray-700">{section.content}</p>
+              <h2 className="text-3xl font-bold mb-4 text-white">{section.title}</h2>
+              <p className="text-lg text-white">{section.content}</p>
             </div>
           ))}
         </div>
+
+        {/* Columna Derecha: Indicadores laterales (solo en pantallas medianas o mayores) */}
         <div className="hidden md:block w-48 ml-4 relative" style={{ height: totalHeight }}>
           <div
             className="absolute left-1/2 transform -translate-x-1/2"
@@ -71,21 +67,21 @@ export default function VerticalSlider() {
               top: "50vh",
               height: `calc((${sections.length} - 1) * (100vh + ${gapValue}))`,
               width: "2px",
-              backgroundColor: "#D1D5DB",
+              backgroundColor: "var(--color-highlight)",
             }}
           />
-          {sections.map((section, index) => (
+          {sections.map((section) => (
             <div
               key={section.id}
               style={{
                 position: "absolute",
-                top: `calc(${index} * (100vh + ${gapValue}) + 50vh)`,
+                top: `calc((${section.id - 1}) * (100vh + ${gapValue}) + 50vh)`,
                 left: "calc(50% + 1rem)",
                 transform: "translateY(-50%)",
                 whiteSpace: "nowrap",
               }}
               className={`font-semibold text-lg transition-colors duration-300 ${
-                activeSection === section.id ? "text-primary" : "text-gray-500"
+                activeSection === section.id ? "text-white" : "text-gray-300"
               }`}
             >
               {section.title}
