@@ -45,7 +45,6 @@
     background-color: #3d2a55;
   }
   .map-placeholder {
-    /* Si se llegara a integrar un mapa dinámico, aquí se pueden aplicar estilos específicos */
     background-color: transparent;
   }
   .nav-link {

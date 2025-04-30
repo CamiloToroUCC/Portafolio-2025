@@ -11,18 +11,10 @@ const sections = [
 
 export default function VerticalSlider() {
   const [activeSection, setActiveSection] = useState(1);
-  const [gapValue, setGapValue] = useState("2rem");
+  const gapValue = "32px";
+  const cardHeight = "600px";
   const containerRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setGapValue(window.innerWidth < 768 ? "1rem" : "2rem");
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   useEffect(() => {
     const observerOptions = { root: null, threshold: 0.5 };
@@ -35,54 +27,52 @@ export default function VerticalSlider() {
       });
     };
     const observer = new IntersectionObserver(observerCallback, observerOptions);
-    sectionRefs.current.forEach((section) => section && observer.observe(section));
+    sectionRefs.current.forEach((section) => {
+      if (section) observer.observe(section);
+    });
     return () => observer.disconnect();
   }, []);
 
-  const totalHeight = `calc(${sections.length} * 100vh + ${sections.length - 1} * ${gapValue})`;
+  const totalHeight = `calc(${sections.length} * ${cardHeight} + ${sections.length - 1} * ${gapValue})`;
 
   return (
     <div ref={containerRef} className="relative" style={{ height: totalHeight }}>
       <div className="flex">
-        {/* Columna Izquierda: Bloques de Contenido */}
         <div className="flex-1 flex flex-col" style={{ gap: gapValue }}>
-          {sections.map((section) => (
+          {sections.map((section, i) => (
             <div
               key={section.id}
               data-index={section.id}
-              ref={(el) => { if (el) sectionRefs.current.push(el); }}
-              className="h-screen snap-start p-6 bg-slider rounded shadow transition-all duration-300"
+              ref={(el) => {
+                sectionRefs.current[i] = el;
+              }}
+              className="h-[600px] snap-center p-6 bg-slider rounded-3xl shadow-lg transition-all duration-300 flex items-center justify-center text-center"
             >
-              <h2 className="text-3xl font-bold mb-4 text-white">{section.title}</h2>
-              <p className="text-lg text-white">{section.content}</p>
+              <p className="text-xl text-white">{section.content}</p>
             </div>
           ))}
         </div>
-
-        {/* Columna Derecha: Indicadores laterales (solo en pantallas medianas o mayores) */}
         <div className="hidden md:block w-48 ml-4 relative" style={{ height: totalHeight }}>
           <div
             className="absolute left-1/2 transform -translate-x-1/2"
             style={{
-              top: "50vh",
-              height: `calc((${sections.length} - 1) * (100vh + ${gapValue}))`,
+              top: "300px",
               width: "2px",
               backgroundColor: "var(--color-highlight)",
+              height: `calc(${sections.length - 1} * (600px + ${gapValue}))`,
             }}
           />
-          {sections.map((section) => (
+          {sections.map((section, i) => (
             <div
               key={section.id}
               style={{
                 position: "absolute",
-                top: `calc((${section.id - 1}) * (100vh + ${gapValue}) + 50vh)`,
+                top: `calc(${i} * (600px + ${gapValue}) + 300px)`,
                 left: "calc(50% + 1rem)",
                 transform: "translateY(-50%)",
                 whiteSpace: "nowrap",
               }}
-              className={`font-semibold text-lg transition-colors duration-300 ${
-                activeSection === section.id ? "text-white" : "text-gray-300"
-              }`}
+              className={`font-semibold text-lg transition-colors duration-300 ${activeSection === section.id ? "text-white" : "text-gray-300"}`}
             >
               {section.title}
             </div>
