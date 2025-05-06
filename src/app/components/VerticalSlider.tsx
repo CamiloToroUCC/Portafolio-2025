@@ -43,10 +43,8 @@ export default function VerticalSlider() {
             <div
               key={section.id}
               data-index={section.id}
-              ref={(el) => {
-                sectionRefs.current[i] = el;
-              }}
-              className="h-[600px] snap-center p-6 bg-slider rounded-3xl shadow-lg transition-all duration-300 flex items-center justify-center text-center"
+              ref={(el) => { sectionRefs.current[i] = el; }}
+              className="h-[600px] snap-center p-6 card-glass transition-all duration-300 flex items-center justify-center text-center"
             >
               <p className="text-xl text-white">{section.content}</p>
             </div>
@@ -58,7 +56,7 @@ export default function VerticalSlider() {
             style={{
               top: "300px",
               width: "2px",
-              backgroundColor: "var(--color-highlight)",
+              backgroundColor: "var(--primary)",
               height: `calc(${sections.length - 1} * (600px + ${gapValue}))`,
             }}
           />

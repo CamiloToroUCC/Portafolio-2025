@@ -1,4 +1,5 @@
 import VerticalSlider from "./components/VerticalSlider";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       </section>
       <section className="w-full">
         <VerticalSlider />
+      </section>
+      <section className="w-full">
+        <Contact />
       </section>
       <section className="w-full">
         <div className="w-full h-96 bg-gray-300 flex items-center justify-center rounded-2xl shadow">
