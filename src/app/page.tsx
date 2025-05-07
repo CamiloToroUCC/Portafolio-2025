@@ -1,5 +1,7 @@
-import VerticalSlider from "./components/VerticalSlider";
-import Contact from "./components/Contact";
+import VerticalSlider from "../components/VerticalSlider";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -12,10 +14,18 @@ export default function Home() {
       <section className="w-full text-center">
         <h1 className="text-5xl font-bold text-white">¡Hola! Soy Camilo Toro</h1>
         <p className="mt-4 text-2xl text-white">I&apos;m a Software Engineer.</p>
-        <p className="mt-2 text-xl text-white">Actualmente soy un estudiante de Ingeniería de Software</p>
+        <p className="mt-2 text-xl text-white">
+          Actualmente soy un estudiante de Ingeniería de Software
+        </p>
       </section>
       <section className="w-full">
         <VerticalSlider />
+      </section>
+      <section className="w-full">
+        <About />
+      </section>
+      <section className="w-full">
+        <Skills />
       </section>
       <section className="w-full">
         <Contact />

@@ -3,34 +3,34 @@
 @theme {
   --font-display: "Satoshi", sans-serif;
   --breakpoint-3xl: 1920px;
-  
+
   --background: #150a2e;
   --foreground: #ffffff;
-  
+
   --card: #281254;
   --card-foreground: #ffffff;
-  
+
   --popover: #150a2e;
   --popover-foreground: #ffffff;
-  
+
   --primary: #a78bfa;
   --primary-foreground: #ffffff;
-  
+
   --secondary: #5727a3;
   --secondary-foreground: #ffffff;
-  
+
   --btn-primary: #9333ea;
   --btn-secondary-border: #8b5cf6;
-  
+
   --muted: #e5e7eb;
   --muted-foreground: #9ca3af;
-  
+
   --border: rgba(255,255,255,0.1);
   --input: rgba(255,255,255,0.1);
   --ring: rgba(255,255,255,0.1);
-  
+
   --radius: 0.75rem;
-  
+
   @keyframes logo-spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
