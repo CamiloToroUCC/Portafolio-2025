@@ -22,14 +22,20 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled ? "py-2 bg-[#150a2e]/90 backdrop-blur-md shadow-lg" : "py-4 bg-transparent"}`}>
-      <div className="container flex justify-between items-center px-4">
+    <header
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "py-2 bg-portfolio-purple-dark backdrop-blur-md shadow-lg"
+          : "py-4 bg-portfolio-purple-dark"
+      }`}
+    >
+      <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="#home" className="text-2xl font-bold">
           <img src="/placeholder-logo.png" alt="Logo" className="w-8 h-8" />
         </a>
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-4">
           {navItems.map((item) => (
-            <a key={item.name} href={item.href} className="nav-link font-medium">
+            <a key={item.name} href={item.href} className="nav-link font-medium py-1 px-3">
               {item.name}
             </a>
           ))}
@@ -39,11 +45,16 @@ export default function Navbar() {
         </button>
       </div>
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#150a2e] text-white backdrop-blur-md shadow-lg">
-          <div className="container px-4 py-4">
-            <nav className="flex flex-col gap-4">
+        <div className="md:hidden bg-portfolio-purple-dark backdrop-blur-md shadow-lg">
+          <div className="container mx-auto px-4 py-2">
+            <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <a key={item.name} href={item.href} onClick={() => setMobileMenuOpen(false)} className="py-2 px-4 hover:bg-white/10 rounded transition-colors">
+                <a
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="py-1 px-3 hover:bg-white/10 rounded transition-colors"
+                >
                   {item.name}
                 </a>
               ))}

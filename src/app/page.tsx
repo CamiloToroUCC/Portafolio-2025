@@ -8,7 +8,7 @@ import Contact from "../components/Contact";
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 space-y-12">
-      <section id="home" className="w-full text-center">
+      <section id="home" className="w-full text-center pt-24">
         <div className="w-full h-96 bg-gray-300 flex items-center justify-center rounded-2xl shadow mb-8">
           <span className="text-gray-700 text-2xl">Foto (Placeholder)</span>
         </div>

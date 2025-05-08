@@ -2,7 +2,7 @@
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding bg-[#150a2e]">
+    <section id="contact" className="section-padding bg-portfolio-purple-dark">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
