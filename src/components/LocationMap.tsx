@@ -4,7 +4,7 @@ export default function LocationMap() {
       <div className="container mx-auto px-4">
         <div className="rounded-xl overflow-hidden">
           <div className="bg-gray-200 h-64 rounded-xl">
-            {/* Placeholder para mapa real – reemplaza la URL o usa tu API Key */}
+            {/* Placeholder para mapa real podria usar una  API Key */}
             <div className="w-full h-full flex items-center justify-center bg-portfolio-purple-medium/50 relative">
               <div className="absolute inset-0">
                 <img

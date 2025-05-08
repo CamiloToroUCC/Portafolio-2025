@@ -15,6 +15,7 @@ type Project = {
 export default function Works() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>("All");
 
+  // Proyectos placeholder; actualiza cuando tengas tus datos reales.
   const projects: Project[] = [
     {
       id: 1,
