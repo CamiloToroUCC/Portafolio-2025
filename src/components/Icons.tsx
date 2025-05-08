@@ -1,6 +1,6 @@
 import React from "react";
 
-interface IconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+export interface IconProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   size?: number;
 }
 
