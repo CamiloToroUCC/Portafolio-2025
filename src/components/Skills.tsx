@@ -3,7 +3,7 @@ export default function Skills() {
     { category: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "TypeScript"] },
     { category: "Backend", items: ["Node.js", "Express", "Python", "Django", "PHP"] },
     { category: "Database", items: ["MongoDB", "MySQL", "PostgreSQL", "Firebase"] },
-    { category: "DevOps", items: ["Docker", "Git", "CI/CD", "AWS", "Azure"] }
+    { category: "DevOps", items: ["Docker", "Git", "CI/CD", "AWS", "Azure"] },
   ];
 
   return (
@@ -15,7 +15,7 @@ export default function Skills() {
       <div className="container mx-auto">
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
           <img src="/placeholder-code-icon.png" alt="Code Icon" className="w-6 h-6" />
-          <h2 className="text-3xl font-bold text-white">Habilidades</h2>
+          <h2 className="text-3xl font-bold text-white">¿Qué tecnologías?</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {skills.map((group, idx) => (
