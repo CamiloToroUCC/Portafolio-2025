@@ -55,27 +55,20 @@ export default function Works() {
   ];
 
   const categories = ["All", ...new Set(projects.map((p) => p.category))];
-  const filteredProjects =
-    selectedCategory && selectedCategory !== "All"
-      ? projects.filter((p) => p.category === selectedCategory)
-      : projects;
+  const filteredProjects = selectedCategory && selectedCategory !== "All"
+    ? projects.filter((p) => p.category === selectedCategory)
+    : projects;
 
   return (
     <section id="works" className="section-padding bg-portfolio-purple-dark">
       <div className="container mx-auto">
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
-          <svg width="24" height="24" fill="#a78bfa" viewBox="0 0 24 24" className="mr-2">
-            <path d="M21 7h-4V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v2H3a1 1 0 00-1 1v11a3 3 0 003 3h14a3 3 0 003-3V8a1 1 0 00-1-1zm-10-2a1 1 0 011-1h4a1 1 0 011 1v2h-6zm10 14a1 1 0 01-1 1H4a1 1 0 01-1-1V9h18z" />
-          </svg>
+          <img src="/placeholder-briefcase.png" alt="Briefcase Icon" className="w-6 h-6" />
           <h2 className="text-3xl font-bold">Mis Trabajos</h2>
         </div>
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           {categories.map((cat, idx) => (
-            <button
-              key={idx}
-              className={`rounded-full px-4 py-2 text-sm transition-colors ${selectedCategory === cat || (!selectedCategory && cat === "All") ? "bg-purple-600 text-white" : "bg-white/10 text-gray-200 hover:bg-white/20"}`}
-              onClick={() => setSelectedCategory(cat)}
-            >
+            <button key={idx} className={`rounded-full px-4 py-2 text-sm transition-colors ${selectedCategory === cat || (!selectedCategory && cat === "All") ? "bg-purple-600 text-white" : "bg-white/10 text-gray-200 hover:bg-white/20"}`} onClick={() => setSelectedCategory(cat)}>
               {cat}
             </button>
           ))}

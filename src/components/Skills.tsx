@@ -11,7 +11,7 @@ export default function Skills() {
       <div className="container mx-auto">
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
           <img src="/placeholder-code-icon.png" alt="Code Icon" className="w-6 h-6" />
-          <h2 className="text-3xl font-bold text-white">¿Qué tecnologías?</h2>
+          <h2 className="text-3xl font-bold text-white">¿Qué tecnologías he Utilizado ?</h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {skills.map((group, idx) => (
