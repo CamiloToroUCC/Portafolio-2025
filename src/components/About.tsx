@@ -7,7 +7,9 @@ export default function About() {
           <h2 className="text-3xl font-bold">¿Quién soy?</h2>
         </div>
         <div className="card-glass p-8 animate-fade-in">
-          <p className="text-gray-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p className="text-gray-300">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
         </div>
       </div>
     </section>

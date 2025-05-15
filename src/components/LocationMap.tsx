@@ -6,7 +6,11 @@ export default function LocationMap() {
           <div className="bg-gray-200 h-64 rounded-xl">
             <div className="w-full h-full flex items-center justify-center bg-portfolio-purple-medium/50 relative">
               <div className="absolute inset-0">
-                <img src="https://maps.googleapis.com/maps/api/staticmap?center=MexicoCity,Mexico&zoom=13&size=800x400&key=YOUR_API_KEY" alt="Map location" className="w-full h-full object-cover opacity-60" />
+                <img
+                  src="https://maps.googleapis.com/maps/api/staticmap?center=MexicoCity,Mexico&zoom=13&size=800x400&key=YOUR_API_KEY"
+                  alt="Map location"
+                  className="w-full h-full object-cover opacity-60"
+                />
               </div>
               <div className="relative z-10 text-center">
                 <span className="bg-portfolio-purple-dark/70 backdrop-blur-sm px-4 py-2 rounded-lg">

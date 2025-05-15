@@ -5,7 +5,9 @@ export default function Footer() {
         <div className="mb-2 md:mb-0">
           <img src="/placeholder-logo.png" alt="Logo" className="w-8 h-8" />
         </div>
-        <p className="text-sm text-gray-400">© {new Date().getFullYear()} Camilo Toro. Todos los derechos reservados.</p>
+        <p className="text-sm text-gray-400">
+          © {new Date().getFullYear()} Camilo Toro. Todos los derechos reservados.
+        </p>
       </div>
     </footer>
   );

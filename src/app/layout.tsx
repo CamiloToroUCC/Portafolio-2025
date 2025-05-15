@@ -5,10 +5,15 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Portafolio de Camilo Toro",
-  description: "Portafolio de Camilo Toro - Ingeniero de Software & Diseñador de Interfaces",
+  description:
+    "Portafolio de Camilo Toro - Ingeniero de Software & Diseñador de Interfaces",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="es">
       <body className="flex flex-col min-h-screen bg-[var(--background)]">
