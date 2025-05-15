@@ -13,8 +13,10 @@ export default function Home() {
           <span className="text-gray-700 text-2xl">Foto (Placeholder)</span>
         </div>
         <h1 className="text-5xl font-bold text-white">¡Hola! Soy Camilo Toro</h1>
-        <p className="mt-4 text-2xl text-white">I'm a Software Engineer.</p>
-        <p className="mt-2 text-xl text-white">Actualmente soy un estudiante de Ingeniería de Software.</p>
+        <p className="mt-4 text-2xl text-white">I&apos;m a Software Engineer.</p>
+        <p className="mt-2 text-xl text-white">
+          Actualmente soy un estudiante de Ingeniería de Software.
+        </p>
       </section>
       <section id="about" className="w-full">
         <About />
