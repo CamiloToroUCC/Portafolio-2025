@@ -3,23 +3,29 @@
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
+import * as THREE from "three";
 
 /*
-  CertificateMesh: carga `textureUrl` en una malla plana para renderizar el certificado 3D.
+  CertificateMesh: carga la textura desde la URL y la aplica a una malla plana.
+  Se establece side: THREE.DoubleSide para que la imagen se muestre en ambas caras.
 */
 function CertificateMesh({ textureUrl }: { textureUrl: string }) {
   const texture = useTexture(textureUrl);
   return (
     <mesh>
       <planeGeometry args={[8, 6]} />
-      <meshBasicMaterial map={texture} toneMapped={false} />
+      <meshBasicMaterial 
+        map={texture} 
+        toneMapped={false} 
+        side={THREE.DoubleSide}  // Permite ver la textura en ambos lados
+      />
     </mesh>
   );
 }
 
 /*
-  Certificate3D: renderiza un canvas con aspect ratio 90% para ocupar casi todo el ancho del contenedor.
-  La cámara se posiciona para que la malla llene el espacio disponible.
+  Certificate3D: renderiza un canvas con un aspect ratio adecuado.
+  Se limita el OrbitControls para que solo gire horizontalmente.
 */
 export default function Certificate3D() {
   return (
@@ -29,7 +35,11 @@ export default function Certificate3D() {
         <Suspense fallback={null}>
           <CertificateMesh textureUrl="/certificates/certificate.jpg" />
         </Suspense>
-        <OrbitControls enableZoom={true} />
+        <OrbitControls
+          enableZoom={false}
+          minPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 2}
+        />
       </Canvas>
     </div>
   );

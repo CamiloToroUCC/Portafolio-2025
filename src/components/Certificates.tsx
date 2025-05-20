@@ -1,16 +1,22 @@
 "use client";
 
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCoverflow, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import Certificate3D from "./Certificate3D";
 
 export default function Certificates() {
+  // Array de certificados de ejemplo (placeholders)
   const certificates = [
     {
       id: 1,
       title: "Certificado de Python",
       institution: "Udemy",
       date: "Marzo 2023",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      description: "Placeholder para certificado de Python.",
       link: "#",
     },
     {
@@ -18,7 +24,23 @@ export default function Certificates() {
       title: "Curso Online de React",
       institution: "Platzi",
       date: "Febrero 2023",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      description: "Placeholder para certificado de React.",
+      link: "#",
+    },
+    {
+      id: 3,
+      title: "Certificado de Node.js",
+      institution: "Udemy",
+      date: "Abril 2023",
+      description: "Placeholder para certificado de Node.js.",
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "Curso de Three.js",
+      institution: "Platzi",
+      date: "Enero 2023",
+      description: "Placeholder para certificado de Three.js.",
       link: "#",
     },
   ];
@@ -37,38 +59,52 @@ export default function Certificates() {
             Certificados y Cursos Online
           </h2>
         </div>
-        {/* Renderizado de cada certificado en una tarjeta */}
-        <div className="grid gap-8 md:grid-cols-2">
+        {/* Swiper con efecto Coverflow */}
+        <Swiper
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView="auto"
+          spaceBetween={30}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={{ clickable: true }}
+          className="mySwiper"
+        >
           {certificates.map((cert) => (
-            <div
-              key={cert.id}
-              className="card-glass p-8 rounded-xl animate-fade-in max-w-3xl mx-auto text-center"
-            >
-              {/* Componente 3D interactivo dentro del card */}
-              <div className="mb-6">
-                <Certificate3D />
+            <SwiperSlide key={cert.id} className="!w-80">
+              <div className="card-glass p-4 rounded-xl animate-fade-in text-center">
+                {/* Componente Certificate3D integrado */}
+                <div className="mb-4">
+                  <Certificate3D />
+                </div>
+                <h3 className="text-2xl font-bold text-purple-300 mb-2">
+                  {cert.title}
+                </h3>
+                <p className="text-xl text-white font-medium mb-2">
+                  {cert.institution}
+                </p>
+                <p className="text-lg text-gray-300 mb-2">{cert.date}</p>
+                <p className="text-lg text-gray-300 mb-4">
+                  {cert.description}
+                </p>
+                {cert.link && (
+                  <a
+                    href={cert.link}
+                    className="text-lg text-purple-400 hover:text-purple-300"
+                  >
+                    Ver Certificado &rarr;
+                  </a>
+                )}
               </div>
-              <h3 className="text-4xl font-bold text-purple-300 mb-2">
-                {cert.title}
-              </h3>
-              <p className="text-3xl text-white font-medium mb-2">
-                {cert.institution}
-              </p>
-              <p className="text-2xl text-gray-300 mb-4">{cert.date}</p>
-              <p className="text-3xl text-gray-300 mb-6">
-                {cert.description}
-              </p>
-              {cert.link && (
-                <a
-                  href={cert.link}
-                  className="text-3xl text-purple-400 hover:text-purple-300"
-                >
-                  Ver Certificado &rarr;
-                </a>
-              )}
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </section>
   );
