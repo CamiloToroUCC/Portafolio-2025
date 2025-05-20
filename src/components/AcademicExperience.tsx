@@ -1,7 +1,5 @@
 "use client";
 
-import Certificates from "./Certificates"; 
-
 export default function AcademicExperience() {
   const academicExperiences = [
     {
@@ -39,7 +37,6 @@ export default function AcademicExperience() {
             </div>
           ))}
         </div>
-        <Certificates />
       </div>
     </section>
   );

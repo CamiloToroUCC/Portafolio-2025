@@ -1,5 +1,8 @@
 "use client";
 
+import React from "react";
+import Certificate3D from "./Certificate3D";
+
 export default function Certificates() {
   const certificates = [
     {
@@ -23,19 +26,43 @@ export default function Certificates() {
   return (
     <section id="certificates" className="py-16 px-4">
       <div className="container mx-auto">
+        {/* Encabezado de la sección */}
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
-          <img src="/placeholder-certificate.png" alt="Certificado Icon" className="w-6 h-6" />
-          <h2 className="text-3xl font-bold text-white">Certificados y Cursos Online</h2>
+          <img
+            src="/placeholder-certificate.png"
+            alt="Certificado Icon"
+            className="w-8 h-8"
+          />
+          <h2 className="text-4xl font-bold text-white">
+            Certificados y Cursos Online
+          </h2>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
+        {/* Renderizado de cada certificado en una tarjeta */}
+        <div className="grid gap-8 md:grid-cols-2">
           {certificates.map((cert) => (
-            <div key={cert.id} className="card-glass p-6 rounded-xl animate-fade-in">
-              <h3 className="text-xl font-semibold text-purple-300 mb-2">{cert.title}</h3>
-              <p className="text-sm text-white font-medium">{cert.institution}</p>
-              <p className="text-xs text-gray-300 mb-2">{cert.date}</p>
-              <p className="text-sm text-gray-300">{cert.description}</p>
+            <div
+              key={cert.id}
+              className="card-glass p-8 rounded-xl animate-fade-in max-w-3xl mx-auto text-center"
+            >
+              {/* Componente 3D interactivo dentro del card */}
+              <div className="mb-6">
+                <Certificate3D />
+              </div>
+              <h3 className="text-4xl font-bold text-purple-300 mb-2">
+                {cert.title}
+              </h3>
+              <p className="text-3xl text-white font-medium mb-2">
+                {cert.institution}
+              </p>
+              <p className="text-2xl text-gray-300 mb-4">{cert.date}</p>
+              <p className="text-3xl text-gray-300 mb-6">
+                {cert.description}
+              </p>
               {cert.link && (
-                <a href={cert.link} className="text-sm text-purple-400 hover:text-purple-300">
+                <a
+                  href={cert.link}
+                  className="text-3xl text-purple-400 hover:text-purple-300"
+                >
                   Ver Certificado &rarr;
                 </a>
               )}

@@ -1,8 +1,8 @@
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Works from "../components/Works";
-import WorkExperience from "../components/WorkExperience";
 import AcademicExperience from "../components/AcademicExperience";
+import Certificates from "../components/Certificates";
 import References from "../components/References";
 import LocationMap from "../components/LocationMap";
 import Contact from "../components/Contact";
@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 space-y-12">
       <section id="home" className="w-full text-center pt-24">
+        {/* Sección Hero */}
         <div className="w-full h-96 bg-gray-300 flex items-center justify-center rounded-2xl shadow mb-8">
           <span className="text-gray-700 text-2xl">Foto (Placeholder)</span>
         </div>
@@ -29,11 +30,11 @@ export default function Home() {
       <section id="works" className="w-full">
         <Works />
       </section>
-      <section id="work-experience" className="w-full">
-        <WorkExperience />
-      </section>
       <section id="academic-experience" className="w-full">
         <AcademicExperience />
+      </section>
+      <section id="certificates" className="w-full">
+        <Certificates />
       </section>
       <section id="references" className="w-full">
         <References />
