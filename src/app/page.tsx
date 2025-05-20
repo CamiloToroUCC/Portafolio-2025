@@ -1,6 +1,8 @@
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Works from "../components/Works";
+import WorkExperience from "../components/WorkExperience";
+import AcademicExperience from "../components/AcademicExperience";
 import References from "../components/References";
 import LocationMap from "../components/LocationMap";
 import Contact from "../components/Contact";
@@ -26,6 +28,12 @@ export default function Home() {
       </section>
       <section id="works" className="w-full">
         <Works />
+      </section>
+      <section id="work-experience" className="w-full">
+        <WorkExperience />
+      </section>
+      <section id="academic-experience" className="w-full">
+        <AcademicExperience />
       </section>
       <section id="references" className="w-full">
         <References />

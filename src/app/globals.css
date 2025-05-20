@@ -55,6 +55,7 @@
   }
 }
 
+/* La clase card-glass ya no se utilizará, pero se mantiene definida por si la requieres en algún otro contexto */
 .card-glass {
   @apply bg-[var(--card)]/50 backdrop-blur-sm rounded-xl border border-[var(--border)] shadow-lg;
 }

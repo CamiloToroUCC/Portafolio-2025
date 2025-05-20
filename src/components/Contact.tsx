@@ -2,30 +2,30 @@
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-padding bg-portfolio-purple-dark">
+    <section id="contact" className="py-16 px-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-3xl font-bold mb-6">Contact</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">Contact</h2>
             <p className="text-gray-300 mb-8">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
                 <img src="/placeholder-mail.png" alt="Mail Icon" className="w-5 h-5" />
-                <span>camilotoro0521@gmail.com</span>
+                <span className="text-white">camilotoro0521@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <img src="/placeholder-phone.png" alt="Phone Icon" className="w-5 h-5" />
-                <span>(+57)3127579345</span>
+                <span className="text-white">(+57)3127579345</span>
               </div>
               <div className="flex items-center gap-3">
                 <img src="/placeholder-mappin.png" alt="Map Pin Icon" className="w-5 h-5" />
-                <span>Pasto (Nariño) - Colombia</span>
+                <span className="text-white">Pasto (Nariño) - Colombia</span>
               </div>
             </div>
             <div className="mt-8">
-              <h3 className="text-xl font-medium mb-4">Redes Sociales</h3>
+              <h3 className="text-xl font-medium mb-4 text-white">Redes Sociales</h3>
               <div className="flex gap-4">
                 <a href="#" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
                   <img src="/placeholder-github.png" alt="GitHub Icon" className="w-5 h-5" />
@@ -40,10 +40,10 @@ export default function Contact() {
             </div>
           </div>
           <div className="card-glass p-6 md:p-8">
-            <h3 className="text-xl font-medium mb-6">Envíame un mensaje</h3>
+            <h3 className="text-xl font-medium mb-6 text-white">Envíame un mensaje</h3>
             <form className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-1">
+                <label htmlFor="name" className="block text-sm font-medium mb-1 text-white">
                   Nombre
                 </label>
                 <input
@@ -53,7 +53,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-1">
+                <label htmlFor="email" className="block text-sm font-medium mb-1 text-white">
                   Email
                 </label>
                 <input
@@ -63,7 +63,7 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-1">
+                <label htmlFor="message" className="block text-sm font-medium mb-1 text-white">
                   Mensaje
                 </label>
                 <textarea

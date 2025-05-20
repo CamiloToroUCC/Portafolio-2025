@@ -10,7 +10,7 @@ export default function Skills() {
       items: [
         {
           name: "HTML",
-          logo: "/placeholder-html.png", // Ruta de ejemplo
+          logo: "/placeholder-html.png",
           description: "Lenguaje de marcado esencial para estructurar el contenido web.",
         },
         {
@@ -111,7 +111,7 @@ export default function Skills() {
         {
           name: "AWS",
           logo: "/placeholder-aws.png",
-          description: "Plataforma en la nube de Amazon con múltiples servicios.",
+          description: "Plataforma en la nube con múltiples servicios para aplicaciones.",
         },
         {
           name: "Azure",
@@ -136,25 +136,16 @@ export default function Skills() {
   };
 
   return (
-    <section
-      id="skills"
-      className="py-16 px-4"
-      style={{ background: "radial-gradient(ellipse at bottom, #281254, #150a2e)" }}
-    >
+    <section id="academic-experience" className="py-16 px-4">
       <div className="container mx-auto">
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
-          <img
-            src="/placeholder-code-icon.png"
-            alt="Code Icon"
-            className="w-6 h-6"
-          />
+          <img src="/placeholder-code-icon.png" alt="Code Icon" className="w-6 h-6" />
           <h2 className="text-3xl font-bold text-white">
             ¿Qué tecnologías he Utilizado?
           </h2>
         </div>
-        {/* Slider: Estructura Flex con flechas afuera del contenedor de la diapositiva */}
         <div className="flex items-center justify-center space-x-4">
-          {/* Flecha Izquierda */}
+          {/* Botón Flecha Izquierda */}
           <button
             onClick={handlePrev}
             className="p-2 bg-white/20 hover:bg-white/40 text-white rounded-full transition-colors"
@@ -167,12 +158,7 @@ export default function Skills() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           {/* Contenedor de la diapositiva */}
@@ -185,7 +171,7 @@ export default function Skills() {
                 {skills[currentSlide].items.map((tech, i) => (
                   <div
                     key={i}
-                    className={`flex items-center p-4 bg-white/10 rounded-lg transition-colors ${
+                    className={`flex items-center p-4 bg-white/10 rounded-lg transition-colors hover:bg-white/20 ${
                       i % 2 === 0
                         ? "flex-row justify-between"
                         : "flex-row-reverse justify-between"
@@ -205,7 +191,7 @@ export default function Skills() {
               </div>
             </div>
           </div>
-          {/* Flecha Derecha */}
+          {/* Botón Flecha Derecha */}
           <button
             onClick={handleNext}
             className="p-2 bg-white/20 hover:bg-white/40 text-white rounded-full transition-colors"
@@ -218,12 +204,7 @@ export default function Skills() {
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>

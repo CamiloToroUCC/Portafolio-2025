@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="bg-portfolio-purple-dark text-white py-16 px-4">
+    <section id="about" className="bg-portfolio-purple-dark text-white py-16 px-4">
       <div className="container mx-auto">
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
           <img src="/placeholder-user.png" alt="User Icon" className="w-6 h-6" />
