@@ -6,10 +6,8 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Certificate3D from "./Certificate3D";
 
 export default function Certificates() {
-  // Array de certificados de ejemplo (placeholders)
   const certificates = [
     {
       id: 1,
@@ -18,6 +16,7 @@ export default function Certificates() {
       date: "Marzo 2023",
       description: "Placeholder para certificado de Python.",
       link: "#",
+      textureUrl: "/certificates/python.jpg",
     },
     {
       id: 2,
@@ -26,6 +25,7 @@ export default function Certificates() {
       date: "Febrero 2023",
       description: "Placeholder para certificado de React.",
       link: "#",
+      textureUrl: "/certificates/react.jpg",
     },
     {
       id: 3,
@@ -34,6 +34,7 @@ export default function Certificates() {
       date: "Abril 2023",
       description: "Placeholder para certificado de Node.js.",
       link: "#",
+      textureUrl: "/certificates/node.jpg",
     },
     {
       id: 4,
@@ -42,6 +43,7 @@ export default function Certificates() {
       date: "Enero 2023",
       description: "Placeholder para certificado de Three.js.",
       link: "#",
+      textureUrl: "/certificates/three.jpg",
     },
   ];
 
@@ -59,8 +61,10 @@ export default function Certificates() {
             Certificados y Cursos Online
           </h2>
         </div>
+
         {/* Swiper con efecto Coverflow */}
         <Swiper
+          modules={[EffectCoverflow, Pagination]}
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
@@ -78,10 +82,14 @@ export default function Certificates() {
         >
           {certificates.map((cert) => (
             <SwiperSlide key={cert.id} className="!w-80">
-              <div className="card-glass p-4 rounded-xl animate-fade-in text-center">
-                {/* Componente Certificate3D integrado */}
-                <div className="mb-4">
-                  <Certificate3D />
+              <div className="card-glass p-4 rounded-xl animate-fade-in text-center flex flex-col items-center">
+                {/* Imagen del certificado bien centrada */}
+                <div className="w-full h-52 mb-4 flex items-center justify-center overflow-hidden rounded-lg shadow-lg bg-white">
+                  <img
+                    src={cert.textureUrl}
+                    alt={cert.title}
+                    className="max-h-full w-auto object-contain"
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-purple-300 mb-2">
                   {cert.title}
@@ -90,9 +98,7 @@ export default function Certificates() {
                   {cert.institution}
                 </p>
                 <p className="text-lg text-gray-300 mb-2">{cert.date}</p>
-                <p className="text-lg text-gray-300 mb-4">
-                  {cert.description}
-                </p>
+                <p className="text-lg text-gray-300 mb-4">{cert.description}</p>
                 {cert.link && (
                   <a
                     href={cert.link}

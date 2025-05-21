@@ -104,3 +104,12 @@ body {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+@layer base {
+  /* Swiper overflow fixes: evita que se recorten los slides rotados */
+  .mySwiper,
+  .mySwiper .swiper-wrapper,
+  .mySwiper .swiper-slide {
+    overflow: visible !important;
+  }
+}
