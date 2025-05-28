@@ -87,9 +87,10 @@
 .tech-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .tech-card:hover {
   transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* Animación para que cada bloque suba desde abajo (efecto Tetris) */
@@ -109,7 +110,7 @@
   }
 }
 
-/* La clase aplicada a cada bloque; "both" asegura que durante el delay se aplique el estilo del 0% */
+/* La clase aplicada a cada bloque; "both" asegura que durante el delay se mantenga el estilo inicial */
 .rise-block {
   animation: riseUp 0.3s ease-out both;
 }
@@ -134,11 +135,22 @@ body {
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Nueva animación scaleUp que se usará para reactivar el efecto al cambiar pestaña */
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.5s ease-in-out;
 }
 
 @layer base {
-  /* Fix para overflow en Swiper: evita que se recorten los slides rotados */
+  /* Fix para overflow en Swiper */
   .mySwiper,
   .mySwiper .swiper-wrapper,
   .mySwiper .swiper-slide {
