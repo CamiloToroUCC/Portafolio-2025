@@ -86,8 +86,7 @@ Cada componente cubre una sección distinta y, al combinarse, ofrecen una experi
 
 1. **Clonar repositorio y moverse a la carpeta raíz**  
    ```bash
-   git clone https://github.com/tu-usuario/mi-portfolio.git
-   cd mi-portfolio
+   git clone https://github.com/CamiloToroUCC/Portafolio-2025.git
    ```
 2. **Instalar dependencias**  
    ```bash

@@ -15,8 +15,10 @@
     "next": "^15.3.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-simple-typewriter": "^5.0.1",
     "swiper": "^11.2.7",
-    "three": "^0.176.0"
+    "three": "^0.176.0",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
