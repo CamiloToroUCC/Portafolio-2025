@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "aos/dist/aos.css";
 
 @theme {
   --font-display: "Satoshi", sans-serif;
@@ -55,7 +56,7 @@
   }
 }
 
-/* La clase card-glass ya no se utilizará, pero se mantiene definida por si la requieres en algún otro contexto */
+/* Fondo con desenfoque */
 .card-glass {
   @apply bg-[var(--card)]/50 backdrop-blur-sm rounded-xl border border-[var(--border)] shadow-lg;
 }
@@ -82,6 +83,37 @@
   transform-origin: bottom left;
 }
 
+/* Efecto hover 3D para tarjetas */
+.tech-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tech-card:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para que cada bloque suba desde abajo (efecto Tetris) */
+@keyframes riseUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* La clase aplicada a cada bloque; "both" asegura que durante el delay se aplique el estilo del 0% */
+.rise-block {
+  animation: riseUp 0.3s ease-out both;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -106,7 +138,7 @@ body {
 }
 
 @layer base {
-  /* Swiper overflow fixes: evita que se recorten los slides rotados */
+  /* Fix para overflow en Swiper: evita que se recorten los slides rotados */
   .mySwiper,
   .mySwiper .swiper-wrapper,
   .mySwiper .swiper-slide {
