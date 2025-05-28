@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mi Portfolio
 
-## Getting Started
+Este proyecto es mi portfolio personal, diseñado para mostrar mis habilidades, proyectos, experiencia académica, certificados, referencias y ubicación. Combina un diseño moderno y dinámico con una navegación fluida e interactiva, demostrando mi pasión y competencias en ingeniería de software.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tecnologías y Herramientas
+
+### Framework y Librerías Frontend
+
+- **Next.js & React**  
+  - Renderizado híbrido (SSR/SSG)  
+  - Nueva estructura de directorio `/app`  
+  - Componentes reutilizables
+
+- **Tailwind CSS v4 (CSS-First)**  
+  - Clases utilitarias para un diseño moderno y responsivo  
+  - Variables CSS definidas en `globals.css` (por ejemplo `--background`, `--card`, etc.)
+
+- **AOS (Animate On Scroll)**  
+  - Animaciones al hacer scroll mediante atributos `data-aos="fade-up"` o `data-aos="fade-in"`
+
+- **Swiper**  
+  - Sliders y carruseles interactivos en componentes como `HeroSuperFlow.tsx` y `Certificates.tsx`
+
+- **EffectCreative / EffectCoverflow**  
+  - Efectos 3D y transiciones creativas en las diapositivas
+
+- **Autoplay y Pagination**  
+  - Reproducción automática de sliders  
+  - Indicadores (bullets) para navegación rápida
+
+---
+
+## Otros Servicios y APIs
+
+- **Google Maps Static API**  
+  Integrado en `LocationMap.tsx` para mostrar un mapa estático de mi ubicación.
+
+---
+
+## Otras Herramientas y Conceptos
+
+- **Icons**  
+  Componentes en `Icons.tsx` para iconos de mail, teléfono, GitHub, LinkedIn, etc.
+
+- **Animaciones Personalizadas**  
+  Definidas en `globals.css`, incluyendo clases como `.fadeIn` y `.riseUp`
+
+- **Directiva `"use client"`**  
+  Indicada en los componentes que deben renderizarse en el cliente bajo Next.js 13
+
+---
+
+## Estructura del Proyecto
+
+```
+mi-portfolio/
+└── src/
+    ├── app/
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    └── components/
+        ├── AOSInitializer.tsx
+        ├── Navbar.tsx
+        ├── About.tsx
+        ├── AcademicExperience.tsx
+        ├── Certificates.tsx
+        ├── TechBlocks.tsx
+        ├── Skills.tsx
+        ├── Works.tsx
+        ├── References.tsx
+        ├── LocationMap.tsx
+        ├── Contact.tsx
+        ├── Footer.tsx
+        ├── HeroSuperFlow.tsx
+        └── Icons.tsx
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Cada componente cubre una sección distinta y, al combinarse, ofrecen una experiencia completa y profesional.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Instalación y Ejecución
 
-## Learn More
+1. **Clonar repositorio y moverse a la carpeta raíz**  
+   ```bash
+   git clone https://github.com/tu-usuario/mi-portfolio.git
+   cd mi-portfolio
+   ```
+2. **Instalar dependencias**  
+   ```bash
+   npm install
+   ```
+3. **Iniciar en modo desarrollo**  
+   ```bash
+   npm run dev
+   ```
+   La aplicación quedará disponible en `http://localhost:3000`.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Construir para producción**  
+   ```bash
+   npm run build
+   npm start
+   ```
+   La aplicación se servirá en `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Resumen
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este portfolio está construido con Next.js y React, usando Tailwind CSS v4 en un enfoque CSS-First para estilos, AOS para animaciones al scroll, Swiper con efectos 3D para sliders, y Google Maps Static API para mostrar mi ubicación. La estructura modular y la directiva `"use client"` garantizan un proyecto escalable y moderno.  

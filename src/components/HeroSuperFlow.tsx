@@ -2,13 +2,11 @@
 
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// IMPORTACIONES DESDE "swiper/modules" según tu requerimiento:
 import { Autoplay, Pagination, EffectCreative } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-creative";
 import "swiper/css/pagination";
 
-// Array de slides con rutas correctas:
 const slides = [
   { id: 1, image: "/images/image1.jpg" },
   { id: 2, image: "/images/image2.jpg" },
@@ -32,12 +30,12 @@ export default function HeroSuperFlow() {
         creativeEffect={{
           prev: {
             shadow: true,
-            translate: (["-120%", 0, -500] as any) as number[],
+            translate: ["-120%", 0, -500] as [string, number, number],
             rotate: [0, 0, 0],
             opacity: 0,
           },
           next: {
-            translate: (["120%", 0, -500] as any) as number[],
+            translate: ["120%", 0, -500] as [string, number, number],
             rotate: [0, 0, 0],
             opacity: 0,
           },
