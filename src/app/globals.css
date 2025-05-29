@@ -153,6 +153,11 @@ body {
   }
 }
 
+.icon-filter {
+  filter: invert(27%) sepia(100%) saturate(7500%) hue-rotate(274deg) brightness(95%) contrast(105%);
+}
+
+
 img.logo-no-filter {
   filter: none !important;
 }
