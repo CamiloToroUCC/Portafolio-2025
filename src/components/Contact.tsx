@@ -6,7 +6,6 @@ import {
   GithubIcon,
   LinkedinIcon,
   InstagramIcon,
-  CommonLogoIcon,
   MapPinIcon,
 } from "./Icons";
 
