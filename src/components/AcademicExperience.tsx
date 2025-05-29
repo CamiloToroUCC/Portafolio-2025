@@ -7,18 +7,18 @@ export default function AcademicExperience() {
     {
       id: 1,
       title: "Estudiante de Ingeniería de Software",
-      institution: "Universidad",
-      date: "Agosto 2020 - Diciembre 2025",
+      institution: "Universidad Cooperativa",
+      date: "Julio 2024 - Actual 2025",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dictum nisl vel magna congue, ac tincidunt nisl feugiat.",
+        "Empecé esta carrera porque me sorprendió que la ciudad de Pasto ofreciera esta opción, y no se limitara únicamente a la carrera de Ingeniería de Sistemas, como ocurría en otras universidades.",
     },
     {
       id: 2,
       title: "Estudiante de Física",
-      institution: "Universidad",
-      date: "Agosto 2016 - Junio 2025",
+      institution: "Universidad del Nariño",
+      date: "Agosto 2019 - Actual 2025",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed justo vel nulla blandit varius.",
+        "Desistí por la pandemia y, tras haber finalizado, retomé mis estudios. Actualmente, estoy en quinto semestre de Física y compagino mis conocimientos con la carrera de Ingeniería de Software.",
     },
   ];
 

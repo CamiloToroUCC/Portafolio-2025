@@ -14,24 +14,24 @@ export default function References() {
   const references: Reference[] = [
     {
       id: 1,
-      name: "Referencia 1 (Placeholder)",
-      position: "Cargo (Placeholder)",
-      company: "Empresa (Placeholder)",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      name: "Daniel Fernando Arteaga",
+      position: "Docente UCC - Desarrollador Mid-Senior",
+      company: "UCC Campus Pasto",
+      text: "Excelente estudiante y aplicado.",
     },
     {
       id: 2,
-      name: "Referencia 2 (Placeholder)",
-      position: "Cargo (Placeholder)",
-      company: "Empresa (Placeholder)",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      name: "Christian Ordóñez Anacona",
+      position: "Full Stack Developer",
+      company: "Indra",
+      text: "Amigos desde el colegio, siempre se le vio muy interesado en este tema.",
     },
     {
       id: 3,
-      name: "Referencia 3 (Placeholder)",
-      position: "Cargo (Placeholder)",
-      company: "Empresa (Placeholder)",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      name: "Luis Carlos Revelo",
+      position: "Docente UCC - Desarrollador Senior",
+      company: "UCC Campus Pasto - Pragma",
+      text: "Se esfuerza en avanzar aceleradamente en su carrera.",
     },
   ];
 

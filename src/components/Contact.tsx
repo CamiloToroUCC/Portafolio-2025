@@ -6,6 +6,7 @@ import {
   GithubIcon,
   LinkedinIcon,
   InstagramIcon,
+
   MapPinIcon,
 } from "./Icons";
 
@@ -38,13 +39,13 @@ export default function Contact() {
             <div data-aos="fade-up" className="mt-8">
               <h3 className="text-xl font-medium mb-4 text-white">Redes Sociales</h3>
               <div className="flex gap-4">
-                <a href="#" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
+                <a href="https://github.com/CamiloToroSan" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
                   <GithubIcon size={20} />
                 </a>
-                <a href="#" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
+                <a href="https://www.linkedin.com/in/camilotorosan/" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
                   <LinkedinIcon size={20} />
                 </a>
-                <a href="#" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
+                <a href="https://www.instagram.com/" className="bg-white/10 rounded-full p-2 hover:bg-white/20 transition-colors">
                   <InstagramIcon size={20} />
                 </a>
               </div>

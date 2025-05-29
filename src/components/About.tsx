@@ -3,9 +3,9 @@
 import { useState } from "react";
 import {
   AboutUserIcon,
+  LikeIcon,
   AboutMusicIcon,
   AboutMovieIcon,
-  LikeIcon,
 } from "./Icons";
 
 const tabs = [
@@ -16,41 +16,77 @@ const tabs = [
     content: (
       <div className="space-y-6">
         <p className="text-gray-300 text-xl leading-relaxed">
-          Me apasiona el desarrollo de{" "}
+          Me apasionan los{" "}
           <span className="text-[var(--primary)] font-semibold">
-            aplicaciones web modernas
-          </span>
-          , donde combino creatividad e innovación para transformar ideas en experiencias digitales impactantes.
+            videojuegos
+          </span>{" "}
+          y, sobre todo, el{" "}
+          <span className="text-[var(--primary)] font-semibold">
+            montaje de componentes de PC
+          </span>{" "}
+          para correr los juegos que me interesan, aunque también utilizo su
+          potencia para modelar objetos en 3D.
         </p>
         <p className="text-gray-300 text-xl leading-relaxed">
+          En deportes, me apasiona el{" "}
           <span className="text-[var(--primary)] font-semibold">
-            Colaborar en proyectos de código abierto
-          </span>{" "}
-          me permite aprender de la comunidad y contribuir al crecimiento colectivo, superando constantemente mis propios límites.
+            baloncesto
+          </span>
+          . Hace años, en el colegio, participé en escuelas de formación y
+          torneos pequeños en la ciudad.
+        </p>
+        <p className="text-gray-300 text-xl leading-relaxed">
+          También me gustan las{" "}
+          <span className="text-[var(--primary)] font-semibold">
+            motocicletas
+          </span>
+          : las he manejado desde los 13 años y mi primera motocicleta fue una{" "}
+          <span className="text-[var(--primary)] font-semibold">
+            Honda Enduro 125cc
+          </span>
+          .
         </p>
       </div>
     ),
   },
   {
     id: "music",
-    label: "Musica Favorita",
+    label: "Música Favorita",
     icon: <AboutMusicIcon size={22} />,
     content: (
       <div className="space-y-6">
         <p className="text-gray-300 text-xl leading-relaxed">
-          Disfruto de la música lo-fi y del jazz instrumental, que me ayudan a concentrarme y a inspirarme mientras trabajo.
+          El <span className="text-[var(--primary)] font-semibold">Rock y Metal anglosajón</span> es siempre lo que más escucho, aunque también el rap y las vibras West Coast son de mi agrado.
+        </p>
+        <p className="text-gray-300 text-xl leading-relaxed">
+          El concierto más grande al que asistí fue el de{" "}
+          <span className="text-[var(--primary)] font-semibold">
+            Roger Waters
+          </span>{" "}
+          en Quito, en diciembre de 2023.
         </p>
       </div>
     ),
   },
   {
     id: "movies",
-    label: "Peliculas Favoritas",
+    label: "Películas Favoritas",
     icon: <AboutMovieIcon size={22} />,
     content: (
       <div className="space-y-6">
         <p className="text-gray-300 text-xl leading-relaxed">
-          Películas como <strong className="text-[var(--primary)] font-semibold">Inception</strong> o <strong className="text-[var(--primary)] font-semibold">The Matrix</strong> me fascinan por su narrativa y profundidad filosófica.
+          Soy fan de las películas espaciales antiguas, sobre todo de cómo se
+          realizan los montajes de las naves y de las tripulaciones en aquella
+          época.
+        </p>
+        <p className="text-gray-300 text-xl leading-relaxed">
+          Por ello, películas clásicas sobre el espacio como{" "}
+          <span className="text-[var(--primary)] font-semibold">
+            2001: A Space Odyssey
+          </span>
+          , <span className="text-[var(--primary)] font-semibold">Alien</span> y{" "}
+          <span className="text-[var(--primary)] font-semibold">Star Wars</span>{" "}
+          son de mis favoritas.
         </p>
       </div>
     ),
@@ -59,6 +95,7 @@ const tabs = [
 
 export default function About() {
   const [activeTab, setActiveTab] = useState<string>(tabs[0].id);
+
   return (
     <section id="about" className="relative text-white py-16 px-4 overflow-hidden">
       <div className="container mx-auto relative z-10">
@@ -76,12 +113,8 @@ export default function About() {
               >
                 <div
                   className={`flex items-center gap-2 text-lg transition-colors duration-500 transform ${
-                    activeTab === tab.id ? "scale-105" : ""
-                  } group-hover:scale-105 ${
-                    activeTab === tab.id
-                      ? "text-[var(--primary)] font-semibold"
-                      : "text-white/90 hover:text-white"
-                  }`}
+                    activeTab === tab.id ? "scale-105 text-[var(--primary)] font-semibold" : "text-white/90 hover:text-white"
+                  } group-hover:scale-105`}
                 >
                   {tab.icon}
                   <span>{tab.label}</span>
