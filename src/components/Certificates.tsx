@@ -6,6 +6,7 @@ import { EffectCoverflow, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
+import { CertificateIcon } from "./Icons";
 
 export default function Certificates() {
   const certificates = [
@@ -50,19 +51,12 @@ export default function Certificates() {
   return (
     <section id="certificates" className="py-16 px-4">
       <div className="container mx-auto">
-        {/* Encabezado de la sección */}
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
-          <img
-            src="/placeholder-certificate.png"
-            alt="Certificado Icon"
-            className="w-8 h-8"
-          />
+          <CertificateIcon size={32} />
           <h2 className="text-4xl font-bold text-white">
             Certificados y Cursos Online
           </h2>
         </div>
-
-        {/* Swiper con efecto Coverflow */}
         <Swiper
           modules={[EffectCoverflow, Pagination]}
           effect="coverflow"
@@ -83,7 +77,6 @@ export default function Certificates() {
           {certificates.map((cert) => (
             <SwiperSlide key={cert.id} className="!w-80">
               <div className="card-glass p-4 rounded-xl animate-fade-in text-center flex flex-col items-center">
-                {/* Imagen del certificado bien centrada */}
                 <div className="w-full h-52 mb-4 flex items-center justify-center overflow-hidden rounded-lg shadow-lg bg-white">
                   <img
                     src={cert.textureUrl}

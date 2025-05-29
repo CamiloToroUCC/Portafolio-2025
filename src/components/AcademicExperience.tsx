@@ -1,5 +1,7 @@
 "use client";
 
+import { DiplomaIcon } from "./Icons";
+
 export default function AcademicExperience() {
   const academicExperiences = [
     {
@@ -23,16 +25,10 @@ export default function AcademicExperience() {
   return (
     <section id="academic-experience" className="py-16 px-4">
       <div className="container mx-auto">
-        {/* Encabezado de la sección */}
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
-          <img
-            src="/placeholder-diploma.png"
-            alt="Diploma Icon"
-            className="w-6 h-6"
-          />
+          <DiplomaIcon size={24} />
           <h2 className="text-3xl font-bold text-white">Experiencia Académica</h2>
         </div>
-        {/* Contenedor flexible: en móvil se apilan y en desktop se muestran en fila */}
         <div className="flex flex-col md:flex-row md:space-x-6 space-y-6 md:space-y-0">
           {academicExperiences.map((exp) => (
             <div

@@ -1,5 +1,3 @@
-// src/app/page.tsx
-
 "use client";
 
 import React from "react";
@@ -12,37 +10,23 @@ import Certificates from "../components/Certificates";
 import References from "../components/References";
 import LocationMap from "../components/LocationMap";
 import Contact from "../components/Contact";
-import Typewriter from "typewriter-effect";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 space-y-12">
-
       <section id="home" className="w-full text-center pt-24 relative">
         <HeroSuperFlow />
-
-        <h1 className="text-5xl font-bold text-white">
-          ¡Hola! Soy Camilo Toro
-        </h1>
-
-        {/* Rotación bilingüe con Typewriter */}
+        <h1 className="text-5xl font-bold text-white">¡Hola! Soy Camilo Toro</h1>
         <div className="mt-4 text-2xl text-white">
           <Typewriter
-            onInit={(tw) => {
-              tw
-                .typeString("I'm a Software Engineer.")
-                .pauseFor(1500)
-                .deleteAll()
-                .typeString("Soy Ingeniero de Software.")
-                .pauseFor(1500)
-                .deleteAll()
-                .start();
-            }}
-            options={{
-              loop: true,
-              delay: 75,
-              deleteSpeed: 50,
-            }}
+            words={["I'm a Software Engineer.", "Soy Ingeniero de Software."]}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
           />
         </div>
       </section>

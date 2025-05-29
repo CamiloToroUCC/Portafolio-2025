@@ -4,7 +4,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectCreative } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/effect-creative";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 const slides = [
@@ -22,9 +22,9 @@ export default function HeroSuperFlow() {
         centeredSlides={true}
         slidesPerView="auto"
         spaceBetween={50}
-        speed={1000} // Transición de 1 segundo
+        speed={1000}
         autoplay={{
-          delay: 3000, // Avanza automáticamente cada 3 segundos
+          delay: 3000,
           disableOnInteraction: false,
         }}
         creativeEffect={{

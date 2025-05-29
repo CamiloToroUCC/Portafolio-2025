@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { CodeIcon } from "./Icons";
 
 export default function Skills() {
   const skills = [
@@ -9,27 +10,27 @@ export default function Skills() {
       items: [
         {
           name: "HTML",
-          logo: "/placeholder-html.png",
-          description: "Lenguaje de marcado esencial para estructurar el contenido web.",
+          logo: "/icons/placeholder-html.png",
+          description: "El esqueleto de mis páginas web, dando estructura y semántica.",
         },
         {
           name: "CSS",
-          logo: "/placeholder-css.png",
-          description: "Hojas de estilo que definen diseño visual y estética.",
+          logo: "/icons/placeholder-css.png",
+          description: "Con lo que intento diseñar interfaces atractivas.",
         },
         {
           name: "JavaScript",
-          logo: "/placeholder-js.png",
-          description: "Lenguaje de scripting para dar interactividad en la web.",
+          logo: "/icons/placeholder-javascript.png",
+          description: "Me permite darle interactividad y dinamismo a cada sitio.",
         },
         {
           name: "React",
-          logo: "/placeholder-react.png",
-          description: "Biblioteca para construir interfaces de usuario de forma declarativa.",
+          logo: "/icons/placeholder-react.png",
+          description: "La biblioteca que más he usado para construir interfaces modernas y reactivas.",
         },
         {
           name: "TypeScript",
-          logo: "/placeholder-ts.png",
+          logo: "/icons/placeholder-typescript.png",
           description: "Superset de JavaScript que añade tipado estático para mayor robustez.",
         },
       ],
@@ -39,28 +40,23 @@ export default function Skills() {
       items: [
         {
           name: "Node.js",
-          logo: "/placeholder-node.png",
-          description: "Entorno de ejecución para JavaScript en el servidor.",
-        },
-        {
-          name: "Express",
-          logo: "/placeholder-express.png",
-          description: "Framework minimalista para Node.js y construcción de APIs.",
+          logo: "/icons/placeholder-node.png",
+          description: "Una plataforma que uso para la ejecución de JavaScript en el servidor.",
         },
         {
           name: "Python",
-          logo: "/placeholder-python.png",
-          description: "Lenguaje de programación versátil y fácil de aprender.",
+          logo: "/icons/placeholder-python.png",
+          description: "Lenguaje versátil que utilizo sobretodo para scripts y tareas automatizadas.",
         },
         {
           name: "Django",
-          logo: "/placeholder-django.png",
-          description: "Framework de alto nivel para Python que impulsa un desarrollo rápido.",
+          logo: "/icons/placeholder-django.png",
+          description: "Framework que me permite desarrollar aplicaciones robustas con rapidez.",
         },
         {
-          name: "PHP",
-          logo: "/placeholder-php.png",
-          description: "Lenguaje de scripting ampliamente usado en el desarrollo web.",
+          name: "Java",
+          logo: "/icons/placeholder-java.png",
+          description: "Lenguaje de programación robusto el cual he usado generalmente junto a frameworks como Spring.",
         },
       ],
     },
@@ -69,23 +65,18 @@ export default function Skills() {
       items: [
         {
           name: "MongoDB",
-          logo: "/placeholder-mongodb.png",
-          description: "Base de datos NoSQL orientada a documentos y gran flexibilidad.",
+          logo: "/icons/placeholder-mongodb.png",
+          description: "La base de datos NoSQL que empleo para proyectos con requisitos flexibles.",
         },
         {
           name: "MySQL",
-          logo: "/placeholder-mysql.png",
-          description: "Sistema de gestión de bases de datos relacional muy popular.",
+          logo: "/icons/placeholder-mysql.png",
+          description: "Un clásico sistema relacional que conozco lo básico.",
         },
         {
           name: "PostgreSQL",
-          logo: "/placeholder-postgresql.png",
-          description: "Base de datos relacional avanzada con potentes características.",
-        },
-        {
-          name: "Firebase",
-          logo: "/placeholder-firebase.png",
-          description: "Plataforma de Google que ofrece un backend listo para aplicaciones.",
+          logo: "/icons/placeholder-postgresql.png",
+          description: "Para proyectos que han solicitado robustez en SQL.",
         },
       ],
     },
@@ -93,29 +84,9 @@ export default function Skills() {
       category: "DevOps",
       items: [
         {
-          name: "Docker",
-          logo: "/placeholder-docker.png",
-          description: "Plataforma para desarrollar y ejecutar aplicaciones en contenedores.",
-        },
-        {
           name: "Git",
-          logo: "/placeholder-git.png",
-          description: "Sistema de control de versiones distribuido.",
-        },
-        {
-          name: "CI/CD",
-          logo: "/placeholder-cicd.png",
-          description: "Automatización de procesos de integración y despliegue continuos.",
-        },
-        {
-          name: "AWS",
-          logo: "/placeholder-aws.png",
-          description: "Plataforma en la nube con múltiples servicios para aplicaciones.",
-        },
-        {
-          name: "Azure",
-          logo: "/placeholder-azure.png",
-          description: "Servicios en la nube de Microsoft para construir y desplegar aplicaciones.",
+          logo: "/icons/placeholder-git.png",
+          description: "Mi herramienta clave para controlar y versionar el código.",
         },
       ],
     },
@@ -135,40 +106,29 @@ export default function Skills() {
   return (
     <section id="skills" className="py-16 px-4">
       <div className="container mx-auto">
-        {/* Título de la sección */}
         <div data-aos="fade-up" className="flex items-center gap-3 mb-8">
-          <img
-            src="/placeholder-code-icon.png"
-            alt="Code Icon"
-            className="w-6 h-6"
-          />
+          <CodeIcon size={24} />
           <h2 className="text-3xl font-bold text-white">
             ¿Qué tecnologías he Utilizado?
           </h2>
         </div>
-        {/* Contenedor del slider de categorías */}
         <div className="flex items-center justify-center space-x-4">
           <button
             onClick={handlePrev}
             className="p-2 bg-white/20 hover:bg-white/40 text-white rounded-full transition-colors"
             aria-label="Diapositiva anterior"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 className="h-6 w-6"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M15 19l-7-7 7-7" />
             </svg>
           </button>
           <div className="w-full">
-            <div
-              key={currentSlide}
-              data-aos="fade-up"
-              className="card-glass p-6 rounded-xl animate-fade-in"
-            >
+            <div key={currentSlide} data-aos="fade-up" className="card-glass p-6 rounded-xl animate-fade-in">
               <h3 className="text-xl font-semibold mb-4 text-purple-300">
                 {skills[currentSlide].category}
               </h3>
@@ -180,11 +140,7 @@ export default function Skills() {
                     className="tech-card rise-block flex items-center p-4 bg-white/10 rounded-lg transition-colors hover:bg-white/20"
                     style={{ animationDelay: `${i * 0.3}s` }}
                   >
-                    <img
-                      src={tech.logo}
-                      alt={`${tech.name} logo`}
-                      className="w-10 h-10 object-contain"
-                    />
+                    <img src={tech.logo} alt={`${tech.name} logo`} className="w-10 h-10 object-contain" />
                     <div className="flex-1 text-center px-2">
                       <h4 className="font-medium text-white">{tech.name}</h4>
                       <p className="text-xs text-gray-300">{tech.description}</p>
@@ -199,14 +155,13 @@ export default function Skills() {
             className="p-2 bg-white/20 hover:bg-white/40 text-white rounded-full transition-colors"
             aria-label="Diapositiva siguiente"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 className="h-6 w-6"
+                 fill="none"
+                 viewBox="0 0 24 24"
+                 stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M9 5l7 7-7 7" />
             </svg>
           </button>
         </div>

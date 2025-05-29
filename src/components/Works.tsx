@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { WorksBriefcaseIcon } from "./Icons";
 
 type Project = {
   id: number;
@@ -20,10 +21,8 @@ export default function Works() {
       id: 1,
       title: "Proyecto (Placeholder)",
       category: "Web Development",
-      image:
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
       technologies: ["React", "Node.js", "MongoDB"],
       link: "#",
     },
@@ -31,10 +30,8 @@ export default function Works() {
       id: 2,
       title: "Proyecto 2 (Placeholder)",
       category: "Mobile App",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
       technologies: ["Flutter", "Firebase"],
       link: "#",
     },
@@ -42,10 +39,8 @@ export default function Works() {
       id: 3,
       title: "Proyecto 3 (Placeholder)",
       category: "Web Development",
-      image:
-        "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
       technologies: ["React", "Tailwind CSS", "Framer Motion"],
       link: "#",
     },
@@ -53,10 +48,8 @@ export default function Works() {
       id: 4,
       title: "Proyecto 4 (Placeholder)",
       category: "IoT",
-      image:
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
+      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. (Placeholder)",
       technologies: ["React Native", "Node.js", "MQTT"],
       link: "#",
     },
@@ -72,7 +65,7 @@ export default function Works() {
     <section id="works" className="section-padding">
       <div className="container mx-auto">
         <div className="flex items-center gap-3 mb-8 animate-fade-in">
-          <img src="/placeholder-briefcase.png" alt="Briefcase Icon" className="w-6 h-6" />
+          <WorksBriefcaseIcon size={24} />
           <h2 className="text-3xl font-bold">Mis Trabajos</h2>
         </div>
         <div className="flex flex-wrap justify-center gap-3 mb-8">
